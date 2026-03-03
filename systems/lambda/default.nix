@@ -13,6 +13,7 @@
     ./users.nix
     ./systemd.nix
     ./zram.nix
+    ./power.nix
   ];
 
   networking.hostName = "lambda"; # Define your hostname.

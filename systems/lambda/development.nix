@@ -36,5 +36,6 @@
     pkgs.rust-analyzer-nightly
 
     haskell.compiler.native-bignum.ghcHEAD
+    haskell-language-server
   ];
 }
