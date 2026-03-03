@@ -73,6 +73,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     wget2
+    btop
     chromium
   ];
   environment.variables = {

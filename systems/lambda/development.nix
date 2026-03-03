@@ -17,6 +17,8 @@
     libgccjit
     libgcc
     gcc
+    tree-sitter
+    gnumake
     (pkgs.fenix.complete.withComponents [
       "cargo"
       "clippy"
