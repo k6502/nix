@@ -67,12 +67,12 @@
     cpu = {
       x86 = {
         msr = {
-          enable = false;
-          owner = "nobody";
-          group = "nobody";
-          mode = "0000";
+          enable = true;
+          owner = "root";
+          group = "root";
+          mode = "0640";
           settings = {
-            allow-writes = false;
+            allow-writes = true;
           };
         };
       };

@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -27,6 +26,8 @@
     "sha256-all"
     "drm"
     "amdgpu"
+    "msr"
+    "ntsync"
   ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
