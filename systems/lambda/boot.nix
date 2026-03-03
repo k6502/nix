@@ -1,14 +1,18 @@
 { config, pkgs, ... }:
 
 {
-  boot.loader = { 
-  	systemd-boot = {
-		enable = true;
-		consoleMode = "max";
-		memtest86 = { enable = true; };
-		edk2-uefi-shell = { enable = true; };
-	};
-  	efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      consoleMode = "max";
+      memtest86 = {
+        enable = true;
+      };
+      edk2-uefi-shell = {
+        enable = true;
+      };
+    };
+    efi.canTouchEfiVariables = true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -57,32 +61,30 @@
   ];
 
   hardware = {
-  	cpu = {
-		x86 = {
-			msr = { 
-				enable = false;
-				owner = "nobody";
-				group = "nobody";
-				mode = "0000";
-				settings = {
-					allow-writes = false;
-				};
-			};
-		};
+    cpu = {
+      x86 = {
+        msr = {
+          enable = false;
+          owner = "nobody";
+          group = "nobody";
+          mode = "0000";
+          settings = {
+            allow-writes = false;
+          };
+        };
+      };
 
-		amd = {
-			updateMicrocode = true;
-			sev = {
-				enable = true;
-				user = "root";
-				group = "kvm";
-				mode = "0660";
-			};
-		};
-	};
+      amd = {
+        updateMicrocode = true;
+        sev = {
+          enable = true;
+          user = "root";
+          group = "kvm";
+          mode = "0660";
+        };
+      };
+    };
   };
-
-
 
   boot.kernel.sysctl = {
     "vm.max_map_count" = 2147483647;
