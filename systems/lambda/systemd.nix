@@ -48,8 +48,5 @@
       enableRootSlice = true;
       enableUserSlices = true;
     };
-    sysusers = {
-      enable = true;
-    };
   };
 }
