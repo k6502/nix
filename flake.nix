@@ -14,9 +14,9 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       fenix,
+      nix-cachyos-kernel,
       ...
     }:
     {
@@ -25,7 +25,7 @@
         system = "x86_64-linux";
         modules = [
           (
-            { pkgs, nix-cachyos-kernel, ... }:
+            { pkgs, ... }:
             {
               nixpkgs.overlays = [
                 fenix.overlays.default
