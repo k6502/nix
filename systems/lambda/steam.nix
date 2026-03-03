@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.steam = {
@@ -9,5 +9,8 @@
     protontricks = {
       enable = true;
     };
+    extraCompatPackages = with pkgs; [
+      proton-cachyos-x86_64-v3
+    ];
   };
 }

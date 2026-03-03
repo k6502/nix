@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   hardware = {
@@ -17,6 +17,15 @@
     graphics = {
       enable = true;
       enable32Bit = true;
+    };
+  };
+  drivers.mesa-git = {
+    enable = true;
+    cacheCleanup = {
+      enable = true;
+    };
+    steamOrphanCleanup = {
+      enable = true;
     };
   };
 }
