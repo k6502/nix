@@ -10,6 +10,7 @@
     ./fonts.nix
     ./development.nix
     ./keyring.nix
+    ./users.nix
   ];
 
   networking.hostName = "lambda"; # Define your hostname.
@@ -50,21 +51,6 @@
   };
   services.desktopManager.cosmic.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kptr = {
-    isNormalUser = true;
-    description = "kptr";
-    extraGroups = [
-      "users"
-      "wheel"
-      "video"
-      "render"
-      "input"
-      "tss"
-    ];
-    packages = with pkgs; [ ];
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -76,6 +62,7 @@
     btop
     chromium
     dwt1-shell-color-scripts
+    ffmpeg-full
   ];
 
   programs.nix-ld.enable = true;
