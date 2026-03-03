@@ -150,4 +150,16 @@
     "net.ipv6.conf.all.temp_valid_lft" = 32400;
     "net.ipv6.conf.all.addr_gen_mode" = 3;
   };
+
+  boot = {
+    runSize = "100%";
+    devSize = "100%";
+    devShmSize = "100%";
+    tmp = {
+      cleanOnBoot = true;
+      useTmpfs = true;
+      tmpfsSize = "100%";
+      tmpfsHugeMemoryPages = "within_size";
+    };
+  };
 }

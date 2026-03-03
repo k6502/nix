@@ -11,6 +11,7 @@
     ./development.nix
     ./keyring.nix
     ./users.nix
+    ./systemd.nix
   ];
 
   networking.hostName = "lambda"; # Define your hostname.
