@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  security.audit.enable = "lock";
   boot.loader = {
     systemd-boot = {
       enable = true;
