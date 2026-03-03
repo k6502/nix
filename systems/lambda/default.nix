@@ -17,6 +17,7 @@
     ./cosmic.nix
     ./locale.nix
     ./security.nix
+    ./steam.nix
   ];
 
   networking.hostName = "lambda"; # Define your hostname.
