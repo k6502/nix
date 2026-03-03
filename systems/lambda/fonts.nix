@@ -12,6 +12,7 @@
       noto-fonts-cjk-serif
       liberation_ttf
       lilex
+      nerd-fonts.lilex
     ];
     fontDir = {
       enable = true;
@@ -32,7 +33,10 @@
       defaultFonts = {
         serif = [ "Liberation Serif" ];
         sansSerif = [ "Liberation Sans" ];
-        monospace = [ "Lilex" ];
+        monospace = [
+          "Lilex Nerd Font"
+          "Lilex"
+        ];
         emoji = [ "Noto Color Emoji" ];
       };
     };
