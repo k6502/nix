@@ -35,7 +35,13 @@
   fileSystems."/" = {
     device = "/dev/mapper/luks-f3246e85-022d-4ebb-9cef-c750a693bbe5";
     fsType = "btrfs";
-    options = [ "subvol=@" ];
+    options = [
+      "compress=zstd:6"
+      "discard=async"
+      "commit=5"
+      "flushoncommit"
+      "subvol=@"
+    ];
   };
 
   boot.initrd.luks.devices."luks-f3246e85-022d-4ebb-9cef-c750a693bbe5".device =
@@ -44,7 +50,13 @@
   fileSystems."/home" = {
     device = "/dev/mapper/luks-f3246e85-022d-4ebb-9cef-c750a693bbe5";
     fsType = "btrfs";
-    options = [ "subvol=@home" ];
+    options = [
+      "compress=zstd:6"
+      "discard=async"
+      "commit=5"
+      "flushoncommit"
+      "subvol=@home"
+    ];
   };
 
   fileSystems."/boot" = {
