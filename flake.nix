@@ -29,6 +29,7 @@
       nixosConfigurations.lambda = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          nix-gaming-edge.nixosModules.default
           (
             { pkgs, ... }:
             {
@@ -45,7 +46,16 @@
                 gitFull
                 nix-ld
               ];
-
+              drivers.mesa-git = {
+                enable = true;
+                cacheCleanup = {
+                  enable = true;
+                  protonPackage = pkgs.proton-cachyos-x86_64-v3; # or variation
+                };
+                steamOrphanCleanup = {
+                  enable = true;
+                };
+              };
             }
           )
           ./systems/lambda/default.nix

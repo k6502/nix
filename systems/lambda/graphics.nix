@@ -19,13 +19,4 @@
       enable32Bit = true;
     };
   };
-  drivers.mesa-git = {
-    enable = true;
-    cacheCleanup = {
-      enable = true;
-    };
-    steamOrphanCleanup = {
-      enable = true;
-    };
-  };
 }
