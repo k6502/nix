@@ -75,6 +75,7 @@
     wget2
     btop
     chromium
+    dwt1-shell-color-scripts
   ];
 
   programs.nix-ld.enable = true;
