@@ -24,6 +24,7 @@
     unzip
     unrar
     p7zip
+    xmake
     (pkgs.fenix.complete.withComponents [
       "cargo"
       "clippy"
