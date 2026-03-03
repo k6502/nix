@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  services.userborn.enable = true;
+  system.etc.overlay = {
+    enable = true;
+    mutable = true;
+  };
+
   boot.initrd.systemd = {
     enable = true;
     tpm2 = {
