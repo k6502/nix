@@ -25,6 +25,7 @@
     unrar
     p7zip
     xmake
+
     (pkgs.fenix.complete.withComponents [
       "cargo"
       "clippy"
@@ -33,5 +34,7 @@
       "rustfmt"
     ])
     pkgs.rust-analyzer-nightly
+
+    haskell.compiler.native-bignum.ghcHEAD
   ];
 }
