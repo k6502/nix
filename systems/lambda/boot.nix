@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  system.nixos-init.enable = true;
+  security.audit.enable = "lock";
   boot.loader = {
     systemd-boot = {
       enable = true;
