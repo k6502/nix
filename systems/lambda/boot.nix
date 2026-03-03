@@ -23,6 +23,7 @@
     "quiet"
     "splash"
     "audit=1"
+    "audit_backlog_limit=65535"
     "pci=pcie_bus_perf,realloc"
     "pcie_aspm=force"
     "pcie_ports=native"
