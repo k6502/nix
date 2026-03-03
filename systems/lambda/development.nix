@@ -19,6 +19,11 @@
     gcc
     tree-sitter
     gnumake
+    gnutar
+    zip
+    unzip
+    unrar
+    p7zip
     (pkgs.fenix.complete.withComponents [
       "cargo"
       "clippy"

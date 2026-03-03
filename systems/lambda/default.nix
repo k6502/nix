@@ -76,6 +76,9 @@
     btop
     chromium
   ];
+
+  programs.nix-ld.enable = true;
+
   environment.variables = {
     GLIBC_TUNABLES = "glibc.malloc.hugetlb=1";
 

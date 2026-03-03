@@ -29,6 +29,7 @@
                 nixfmt
                 nixfmt-tree
                 gitFull
+		nix-ld
               ];
 
             }
