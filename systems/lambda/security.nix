@@ -6,6 +6,7 @@
     unprivilegedUsernsClone = true;
     forcePageTableIsolation = true;
     wrapperDirSize = "100%";
+
     tpm2 = {
       enable = true;
       abrmd = {
@@ -16,25 +17,31 @@
         interface = "tabrmd";
       };
     };
+
     rtkit = {
       enable = true;
     };
+
     audit = {
       enable = "lock";
       backlogLimit = 65535;
     };
+
     auditd = {
       enable = true;
     };
-    security.sudo.enable = false;
-    security.sudo-rs.enable = false;
+
+    sudo.enable = false;
+    sudo-rs.enable = false;
     run0 = {
       enableSudoAlias = true;
       wheelNeedsPassword = false;
     };
+
     isolate = {
       enable = true;
     };
+
     pam = {
       enableUMask = true;
     };
