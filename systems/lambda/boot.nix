@@ -72,7 +72,7 @@
           group = "root";
           mode = "0640";
           settings = {
-            allow-writes = true;
+            allow-writes = "on";
           };
         };
       };
@@ -162,7 +162,7 @@
       cleanOnBoot = true;
       useTmpfs = true;
       tmpfsSize = "100%";
-      tmpfsHugeMemoryPages = "within_size";
+      tmpfsHugeMemoryPages = "advise";
     };
   };
 }
