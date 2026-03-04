@@ -21,8 +21,7 @@
         "flakes"
         "git-hashing"
         "nix-command"
-        "verified-fetches
-"
+        "verified-fetches"
       ];
       auto-allocate-uids = true;
       auto-optimise-store = true;
@@ -51,8 +50,6 @@
       enableParallelBuildingByDefault = true;
       checkMeta = true;
       contentAddressedByDefault = true;
-      strictDepsByDefault = true;
-      structuredAttrsByDefault = true;
     };
   };
   programs.nix-index.enable = true;
