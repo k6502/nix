@@ -9,6 +9,7 @@
         "big-parallel"
         "kvm"
         "nixos-test"
+        "ca-derivations"
       ];
       # even though some of these are defaults, i like to make sure they are enabled/disabled.
       experimental-features = [
@@ -52,11 +53,6 @@
       contentAddressedByDefault = true;
       strictDepsByDefault = true;
       structuredAttrsByDefault = true;
-    };
-    hostPlatform = {
-      gcc.arch = "native";
-      gcc.tune = "native";
-      system = "x86_64-linux";
     };
   };
   programs.nix-index.enable = true;
