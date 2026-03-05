@@ -9,13 +9,11 @@
         "big-parallel"
         "kvm"
         "nixos-test"
-        "ca-derivations"
       ];
       # even though some of these are defaults, i like to make sure they are enabled/disabled.
       experimental-features = [
         "auto-allocate-uids"
         "blake3-hashes"
-        "ca-derivations"
         "cgroups"
         "dynamic-derivations"
         "flakes"
@@ -47,7 +45,6 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      contentAddressedByDefault = true;
     };
   };
   programs.nix-index.enable = true;
