@@ -47,8 +47,6 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      enableParallelBuildingByDefault = true;
-      checkMeta = true;
       contentAddressedByDefault = true;
     };
   };
