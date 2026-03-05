@@ -38,7 +38,6 @@
     };
     terminal-exec = {
       enable = true;
-      package = with pkgs; [ alacritty ];
     };
   };
 }
