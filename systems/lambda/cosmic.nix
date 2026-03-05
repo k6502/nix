@@ -7,9 +7,19 @@
   ];
   services = {
     displayManager = {
-      cosmic-greeter.enable = true;
+      cosmic-greeter = {
+        enable = true;
+      };
     };
-    desktopManager.cosmic.enable = true;
+    desktopManager.cosmic = {
+      enable = true;
+    };
+  };
+
+  services = {
+    flatpak = {
+      enable = true;
+    };
   };
   xdg = {
     mime = {
