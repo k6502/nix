@@ -1,50 +1,61 @@
 { pkgs, ... }:
 
 {
-  programs.zsh = {
-    enable = true;
-    zsh-autoenv = {
+  programs = {
+    direnv = {
       enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = true;
+      nix-direnv = {
+        enable = true;
+      };
     };
-    syntaxHighlighting = {
+    zsh = {
       enable = true;
-      highlighters = [
-        "main"
-        "brackets"
-        "pattern"
-        "cursor"
-        "regexp"
-        "root"
-        "line"
-      ];
-    };
-    ohMyZsh = {
-      enable = true;
-      preLoaded = ''
-        zstyle :omz:plugins:ssh-agent agent-forwarding yes
-      '';
-      plugins = [
-        "git"
-        "direnv"
-        "fzf"
-        "git-auto-fetch"
-        "gpg-agent"
-        "ssh-agent"
-        "rust"
-        "ssh"
-      ];
-    };
-    enableLsColors = true;
-    enableGlobalCompInit = true;
-    enableCompletion = true;
-    enableBashCompletion = true;
-    autosuggestions = {
-      enable = true;
-      strategy = [
-        "history"
-        "completion"
-        "match_prev_cmd"
-      ];
+      zsh-autoenv = {
+        enable = true;
+      };
+      syntaxHighlighting = {
+        enable = true;
+        highlighters = [
+          "main"
+          "brackets"
+          "pattern"
+          "cursor"
+          "regexp"
+          "root"
+          "line"
+        ];
+      };
+      ohMyZsh = {
+        enable = true;
+        preLoaded = ''
+          zstyle :omz:plugins:ssh-agent agent-forwarding yes
+        '';
+        plugins = [
+          "git"
+          "direnv"
+          "fzf"
+          "git-auto-fetch"
+          "gpg-agent"
+          "ssh-agent"
+          "rust"
+          "ssh"
+        ];
+        theme = "fino";
+      };
+      enableLsColors = true;
+      enableGlobalCompInit = true;
+      enableCompletion = true;
+      enableBashCompletion = true;
+      autosuggestions = {
+        enable = true;
+        strategy = [
+          "history"
+          "completion"
+          "match_prev_cmd"
+        ];
+      };
     };
   };
   users.users.kptr = {
