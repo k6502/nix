@@ -4,6 +4,12 @@
   environment.defaultPackages = with pkgs; [
     cosmic-wallpapers
     variety
+    xdg-utils
+    xdg-utils-cxx
+    xdg-user-dirs
+    xdg-dbus-proxy
+    xdg-user-dirs-gtk
+    xdg-terminal-exec
   ];
   services = {
     displayManager = {
