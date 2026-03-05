@@ -63,6 +63,8 @@
       vesktop
       fastfetch
       alacritty
+      direnv
+      nix-direnv
     ];
   };
 }
