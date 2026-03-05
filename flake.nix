@@ -37,7 +37,6 @@
                 fenix.overlays.default
                 nix-cachyos-kernel.overlays.pinned
                 nix-gaming-edge.overlays.default
-                nix-gaming-edge.overlays.mesa-git
                 nix-gaming-edge.overlays.proton-cachyos
               ];
               environment.systemPackages = with pkgs; [
@@ -46,16 +45,6 @@
                 gitFull
                 nix-ld
               ];
-              drivers.mesa-git = {
-                enable = true;
-                cacheCleanup = {
-                  enable = true;
-                  protonPackage = pkgs.proton-cachyos-x86_64-v3; # or variation
-                };
-                steamOrphanCleanup = {
-                  enable = true;
-                };
-              };
             }
           )
           ./systems/lambda/default.nix
