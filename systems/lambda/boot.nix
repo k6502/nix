@@ -165,5 +165,18 @@
       tmpfsSize = "100%";
       tmpfsHugeMemoryPages = "advise";
     };
+
+    plymouth = {
+      enable = true;
+    };
   };
+
+  services = {
+    scx = {
+      enable = true;
+      scheduler = "scx_lavd";
+      # extraArgs = [ ];
+    };
+  };
+
 }
