@@ -16,7 +16,7 @@
     efi.canTouchEfiVariables = true;
   };
 
-  boot.kernelPackages = pkgs.linuxKernel.kernels.linux_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   boot.kernelParams = [
     "ro"
