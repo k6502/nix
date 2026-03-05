@@ -175,7 +175,20 @@
     scx = {
       enable = true;
       scheduler = "scx_lavd";
-      # extraArgs = [ ];
+      extraArgs = [
+        "--performance"
+        "--per-cpu-dsq"
+        "--slice-max-us"
+        "10000"
+        "--slice-min-us"
+        "2000"
+        "--pinned-slice-us"
+        "10000"
+        "--mig-delta-pct"
+        "25"
+        "--preempt-shift"
+        "3"
+      ];
     };
   };
 
