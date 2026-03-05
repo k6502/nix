@@ -17,7 +17,6 @@
       enable = true;
       backend = "nftables";
       checkReversePath = "strict";
-      autoLoadConntrackHelpers = true;
       filterForward = true;
       extraInputRules = ''
         ct state invalid drop
