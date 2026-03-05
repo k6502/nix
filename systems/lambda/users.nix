@@ -76,6 +76,12 @@
       alacritty
       direnv
       nix-direnv
+      (prismlauncher.override {
+        # GraalVM has proven superiority in terms of performance for both clients and servers
+        jdks = [
+          graalvmPackages.graalvm-oracle
+        ];
+      })
     ];
   };
 }
