@@ -61,6 +61,7 @@
     "delayacct"
     "gbpages"
     "preempt=full"
+    "workqueue.power_efficient=N"
   ];
 
   hardware = {
