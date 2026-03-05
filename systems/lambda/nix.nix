@@ -27,7 +27,7 @@
       max-jobs = "auto";
       fsync-metadata = true;
       fsync-store-paths = true;
-      download-buffer-size = 268435456;
+      download-buffer-size = 1073741824;
       http-connections = 0;
       http2 = true;
       sandbox = true;

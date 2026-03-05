@@ -16,7 +16,7 @@
     efi.canTouchEfiVariables = true;
   };
 
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
+  boot.kernelPackages = pkgs.linuxKernel.kernels.linux_zen;
 
   boot.kernelParams = [
     "ro"

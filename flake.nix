@@ -7,9 +7,6 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-cachyos-kernel = {
-      url = "github:xddxdd/nix-cachyos-kernel/release";
-    };
     nix-gaming-edge = {
       url = "github:powerofthe69/nix-gaming-edge";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,7 +17,6 @@
     {
       nixpkgs,
       fenix,
-      nix-cachyos-kernel,
       nix-gaming-edge,
       ...
     }:
@@ -35,7 +31,6 @@
             {
               nixpkgs.overlays = [
                 fenix.overlays.default
-                nix-cachyos-kernel.overlays.pinned
                 nix-gaming-edge.overlays.default
                 nix-gaming-edge.overlays.proton-cachyos
               ];
