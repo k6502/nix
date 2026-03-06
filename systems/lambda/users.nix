@@ -76,6 +76,7 @@
       alacritty
       direnv
       nix-direnv
+      thunderbird
       (prismlauncher.override {
         # GraalVM has proven superiority in terms of performance for both clients and servers
         jdks = [
